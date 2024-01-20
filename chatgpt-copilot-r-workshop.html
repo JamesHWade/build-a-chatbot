@@ -87,6 +87,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#clone-workshop-materials" id="toc-clone-workshop-materials" class="nav-link" data-scroll-target="#clone-workshop-materials">Clone Workshop Materials</a></li>
   </ul></li>
+  <li><a href="#create-accounts-and-set-api-keys" id="toc-create-accounts-and-set-api-keys" class="nav-link" data-scroll-target="#create-accounts-and-set-api-keys">Create Accounts and Set API Keys</a></li>
   <li><a href="#suggested-resources" id="toc-suggested-resources" class="nav-link" data-scroll-target="#suggested-resources">Suggested Resources</a></li>
   </ul>
 </nav>
@@ -157,8 +158,258 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>This repo uses <code>{renv}</code> to help create a reproducible environment. When you clone and open the package in RStudio, you should be prompted to install the packages.</p>
+<p>This repo uses <code>{renv}</code> to help create a reproducible environment. When you clone and open the package in RStudio, you should be prompted to install the packages. If not, you can run the following code to install the packages.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("renv)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
+</section>
+<section id="create-accounts-and-set-api-keys" class="level2">
+<h2 class="anchored" data-anchor-id="create-accounts-and-set-api-keys">Create Accounts and Set API Keys</h2>
+<p>With <code>{gptstudio}</code> and <code>{gpttools}</code>, you can use any of seven AI services. You’ll need to create an account with the service you want to use. Here’s a list of the services and links to the documentation and setup instructions:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>AI Service</th>
+<th>Models</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://platform.openai.com">OpenAI</a></td>
+<td>gpt-4-turbo, gpt-4, gpt-3.5-turbo (<a href="https://platform.openai.com/docs/models">latest models</a>)</td>
+<td><a href="https://platform.openai.com/docs/api-reference">OpenAI API Docs</a></td>
+</tr>
+<tr class="even">
+<td><a href="https://huggingface.co/">HuggingFace</a></td>
+<td>various</td>
+<td><a href="https://huggingface.co/docs/hub/models-inference">HF Inference API Docs</a></td>
+</tr>
+<tr class="odd">
+<td><a href="https://docs.anthropic.com/claude/docs/guide-to-anthropics-prompt-engineering-resources">Anthropic</a></td>
+<td>claude-2.1, claude-instant-1.2</td>
+<td><a href="https://docs.anthropic.com/claude/reference/getting-started-with-the-api">Anthropic API Docs</a></td>
+</tr>
+<tr class="even">
+<td><a href="https://ollama.ai/">Ollama</a></td>
+<td>mistral, llama2, mixtral, phi (<a href="https://ollama.ai/library">latest models</a>)</td>
+<td><a href="https://github.com/jmorganca/ollama/blob/main/docs/api.md">Ollama API Docs</a></td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.perplexity.ai">Perplexity</a></td>
+<td>pplx-7b-chat, pplx-70b-chat, pplx-7b-online, pplx-70b-online, llama-2-70b-chat, codellama-34b-instruct, mistral-7b-instruct, and mixtral-8x7b-instruct</td>
+<td><a href="https://docs.perplexity.ai/reference/post_chat_completions">Perplexity API Docs</a></td>
+</tr>
+<tr class="even">
+<td><a href="https://ai.google.dev/tutorials/ai-studio_quickstart">Google AI Studio</a></td>
+<td>Gemini and Palm (legacy)</td>
+<td><a href="https://ai.google.dev/docs">Google AI Studio Docs</a></td>
+</tr>
+<tr class="odd">
+<td><a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/overview">Azure OpenAI</a></td>
+<td>gpt-4, gpt-3.5-turbo (<a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-4-and-gpt-4-turbo-preview">latest models</a>)</td>
+<td><a href="https://learn.microsoft.com/en-us/azure/ai-services/openai/quickstart?tabs=command-line,python&amp;pivots=rest-api">Azure OpenAI API Docs</a></td>
+</tr>
+</tbody>
+</table>
+<p>Follow instructions for your chosen service to create an account and get an API key. You’ll need to add the API key to your <code>.Renviron</code> file. Here are instructions for each service:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">OpenAI</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">HuggingFace</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Anthropic</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Ollama</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false" href="">Perplexity</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-6" role="tab" aria-controls="tabset-2-6" aria-selected="false" href="">Google AI Studio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-7" role="tab" aria-controls="tabset-2-7" aria-selected="false" href="">Azure OpenAI</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<section id="creating-an-openai-account" class="level4">
+<h4 class="anchored" data-anchor-id="creating-an-openai-account">Creating an OpenAI Account</h4>
+<ul>
+<li>Visit <a href="https://openai.com/">OpenAI’s website</a> and sign up for an account.</li>
+<li>Follow the instructions to verify your account.</li>
+</ul>
+</section>
+<section id="creating-an-openai-api-key" class="level4">
+<h4 class="anchored" data-anchor-id="creating-an-openai-api-key">Creating an OpenAI API Key</h4>
+<ul>
+<li>Once logged in, navigate to the API section in your account settings.</li>
+<li>Follow the instructions to create a new API key. More detailed steps can be found in OpenAI’s <a href="https://beta.openai.com/docs/">API documentation</a>.</li>
+</ul>
+</section>
+<section id="setting-the-openai-api-key-in-.renviron" class="level4">
+<h4 class="anchored" data-anchor-id="setting-the-openai-api-key-in-.renviron">Setting the OpenAI API Key in .Renviron</h4>
+<p>To modify the <code>.Renviron</code> file:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(usethis) </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">edit_r_environ</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For a persistent setting, add the following line to <code>.Renviron</code>, replacing <code>"&lt;APIKEY&gt;"</code> with your actual API key:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">OPENAI_API_KEY</span><span class="op">=</span><span class="st">"&lt;APIKEY&gt;"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Save the file and restart your R session for the changes to take effect.</p>
+<p><strong>Caution:</strong> Ensure <code>.Renviron</code> is included in your <code>.gitignore</code> file to avoid exposing your API key with version control systems like GitHub or GitLab.</p>
+<p><strong>Important Note:</strong> OpenAI API requires valid payment details in your OpenAI account to function. This is a restriction imposed by OpenAI and is unrelated to this package.</p>
+</section>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<section id="creating-a-huggingface-account" class="level4">
+<h4 class="anchored" data-anchor-id="creating-a-huggingface-account">Creating a HuggingFace Account</h4>
+<ul>
+<li>Visit <a href="https://huggingface.co/">HuggingFace’s website</a> and sign up for an account.</li>
+<li>Complete the account verification process.</li>
+</ul>
+</section>
+<section id="creating-a-huggingface-api-key" class="level4">
+<h4 class="anchored" data-anchor-id="creating-a-huggingface-api-key">Creating a HuggingFace API Key</h4>
+<ul>
+<li>After logging in, go to your account settings.</li>
+<li>Find the section for API keys and create a new one. Detailed guidance is available in HuggingFace’s API documentation.</li>
+</ul>
+</section>
+<section id="setting-the-huggingface-api-key-in-.renviron" class="level4">
+<h4 class="anchored" data-anchor-id="setting-the-huggingface-api-key-in-.renviron">Setting the HuggingFace API Key in .Renviron</h4>
+<p>To modify the <code>.Renviron</code> file:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(usethis)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">edit_r_environ</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For a persistent setting, add the following line to <code>.Renviron</code>, replacing <code>"&lt;APIKEY&gt;"</code> with your actual HuggingFace API key:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="va">HF_API_KEY</span><span class="op">=</span><span class="st">"&lt;APIKEY&gt;"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Save the file and restart your R session for the changes to take effect.</p>
+<p><strong>Caution:</strong> Remember to include <code>.Renviron</code> in your <code>.gitignore</code> file to prevent exposing your API key, especially if using version control systems like GitHub or GitLab.</p>
+</section>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<section id="creating-an-anthropic-account" class="level4">
+<h4 class="anchored" data-anchor-id="creating-an-anthropic-account">Creating an Anthropic Account</h4>
+<ul>
+<li>Go to the <a href="https://www.anthropic.com/">Anthropic website</a> and sign up.</li>
+<li>Verify your account as instructed.</li>
+</ul>
+</section>
+<section id="creating-an-anthropic-api-key" class="level4">
+<h4 class="anchored" data-anchor-id="creating-an-anthropic-api-key">Creating an Anthropic API Key</h4>
+<ul>
+<li>Log into your Anthropic account and navigate to the API section.</li>
+<li>Create an API key following their guidelines. Check Anthropic’s API documentation for more details.</li>
+</ul>
+</section>
+<section id="setting-the-anthropic-api-key-in-.renviron" class="level4">
+<h4 class="anchored" data-anchor-id="setting-the-anthropic-api-key-in-.renviron">Setting the Anthropic API Key in .Renviron</h4>
+<p>To modify the <code>.Renviron</code> file:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(usethis)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">edit_r_environ</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For a persistent setting, add the following line to <code>.Renviron</code>, replacing <code>"&lt;APIKEY&gt;"</code> with your actual Anthropic API key:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="va">ANTHROPIC_API_KEY</span><span class="op">=</span><span class="st">"&lt;APIKEY&gt;"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Save the file and restart your R session for the changes to take effect.</p>
+<p><strong>Caution:</strong> Ensure <code>.Renviron</code> is not exposed if using version control systems.</p>
+</section>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<p>The <a href="https://github.com/jmorganca/ollama">ollama</a> service allows you to run open source LLMs locally, providing a command line interface and an API. By wrapping the later, we can use it within our chat app.</p>
+<p>You can run ollama in any platform as a docker container. The following code runs the CPU-only version:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">-d</span> <span class="at">-v</span> ollama:/root/.ollama <span class="at">-p</span> 11434:11434 <span class="at">--name</span> ollama ollama/ollama</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This code:</p>
+<ol type="1">
+<li>pulls the latest ollama image from the ollama hub (<code>ollama/ollama</code>)</li>
+<li>exposes the ollama API in <code>http://localhost:11434</code> (<code>-p 11434:11434</code>)</li>
+<li>sets up the ollama volume, to be used in the “/root/.ollama” path inside the container. this will allow you to update the container later without losing your already downloaded models. (<code>-v ollama:/root/.ollama</code>)</li>
+<li>assigns the name “ollama” to the container (<code>--name ollama</code>)</li>
+<li>runs the container in detached mode (<code>docker run -d</code>)</li>
+</ol>
+<p>You can see more docker options in the <a href="https://ollama.ai/blog/ollama-is-now-available-as-an-official-docker-image">official blog post</a>.</p>
+<p>Before using the service, you need to pull a model. Run the following code inside your container to pull llama2:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ollama</span> pull llama2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Check the <a href="https://ollama.ai/library">ollama library</a> to see more models. For more advanced install options, check the <a href="https://github.com/jmorganca/ollama">official documentation</a>.</p>
+<p>By default, the chat addin will use <code>http://localhost:11434</code> to locate the ollama API. You can customize this by setting up the <code>OLLAMA_HOST</code> environmental variable with <code>usethis::edit_r_environ()</code>.</p>
+<section id="an-example-with-ollama" class="level4">
+<h4 class="anchored" data-anchor-id="an-example-with-ollama">An Example with Ollama</h4>
+<p>Here is a short video showing you how to get started with ollama. It assumes that you have already installed docker. See the docker <a href="https://docs.docker.com/get-docker/">installation guide</a> for more information.</p>
+<p><img src="https://raw.githubusercontent.com/MichelNivard/gptstudio/main/media/gptstudio-ollama-example.gif" class="img-fluid" width="700"></p>
+</section>
+</div>
+<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
+<section id="creating-an-perplexity-account" class="level4">
+<h4 class="anchored" data-anchor-id="creating-an-perplexity-account">Creating an Perplexity Account</h4>
+<ul>
+<li>Go to the <a href="https://perplexity.ai/">Perplexity website</a> and sign up.</li>
+<li>Verify your account as instructed.</li>
+</ul>
+</section>
+<section id="creating-an-perplexity-api-key" class="level4">
+<h4 class="anchored" data-anchor-id="creating-an-perplexity-api-key">Creating an Perplexity API Key</h4>
+<ul>
+<li>Log into your Perplexity account and navigate to the <a href="https://docs.perplexity.ai/">API documentation</a>.</li>
+<li>Create an API key following their guidelines. Check Perplexity’s API documentation for more details.</li>
+</ul>
+</section>
+<section id="setting-the-perplexity-api-key-in-.renviron" class="level4">
+<h4 class="anchored" data-anchor-id="setting-the-perplexity-api-key-in-.renviron">Setting the Perplexity API Key in .Renviron</h4>
+<p>To modify the <code>.Renviron</code> file:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(usethis)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">edit_r_environ</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For a persistent setting, add the following line to <code>.Renviron</code>, replacing <code>"&lt;APIKEY&gt;"</code> with your actual Perplexity API key:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="va">PERPLEXITY_API_KEY</span><span class="op">=</span><span class="st">"&lt;APIKEY&gt;"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Save the file and restart your R session for the changes to take effect.</p>
+<p><strong>Caution:</strong> Ensure <code>.Renviron</code> is not exposed if using version control systems.</p>
+</section>
+</div>
+<div id="tabset-2-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-6-tab">
+<section id="creating-an-account-in-googles-ai-studio" class="level4">
+<h4 class="anchored" data-anchor-id="creating-an-account-in-googles-ai-studio">Creating an Account in Google’s AI Studio</h4>
+<ul>
+<li>Visit <a href="https://makersuite.google.com">Google’s AI Studio website</a> and sign up.</li>
+<li>Complete the verification process.</li>
+</ul>
+</section>
+<section id="accessing-google-palm-api" class="level4">
+<h4 class="anchored" data-anchor-id="accessing-google-palm-api">Accessing Google PALM API</h4>
+<ul>
+<li>In your Google Cloud Console, enable the PALM API.</li>
+<li>Create an API key as per the instructions in <a href="https://ai.google.dev/docs">Google’s API documentation</a>.</li>
+</ul>
+</section>
+<section id="setting-the-google-ai-studio-api-key-in-.renviron" class="level4">
+<h4 class="anchored" data-anchor-id="setting-the-google-ai-studio-api-key-in-.renviron">Setting the Google AI Studio API Key in .Renviron</h4>
+<p>To modify the <code>.Renviron</code> file:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(usethis)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">edit_r_environ</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For a persistent setting, add the following line to <code>.Renviron</code>, replacing <code>"&lt;APIKEY&gt;"</code> with your actual Google PALM API key:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="va">PALM_API_KEY</span><span class="op">=</span><span class="st">"&lt;APIKEY&gt;"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Save the file and restart your R session for the changes to take effect.</p>
+<p><strong>Caution:</strong> Be careful not to expose <code>.Renviron</code> in public repositories or version control systems to protect your API key.</p>
+</section>
+</div>
+<div id="tabset-2-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-7-tab">
+<p>To configure gptstudio to work using Azure OpenAI service, you need to provide some configuration details in your .Renviron file. Specifically, gptstudio looks for five environment variables:</p>
+<ul>
+<li>AZURE_OPENAI_TASK</li>
+<li>AZURE_OPENAI_ENDPOINT</li>
+<li>AZURE_OPENAI_DEPLOYMENT_NAME</li>
+<li>AZURE_OPENAI_KEY</li>
+<li>AZURE_OPENAI_API_VERSION</li>
+</ul>
+<p>Here’s how you can add these details to your .Renviron file:</p>
+<ol type="1">
+<li>Locate your .Renviron file with <code>usethis::edit_r_environ()</code>.</li>
+<li>Add environment variable details: Add a new line for each variable you need to set in the following format: VARIABLE_NAME=“YOUR_VALUE”. Replace VARIABLE_NAME with the name of the environment variable and YOUR_VALUE with the actual value that you want to set. For example, to set the API key you would have a line like this:</li>
+</ol>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="va">AZURE_OPENAI_KEY</span><span class="op">=</span><span class="st">"your_actual_key_goes_here"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You need to do this for each of the environment variables expected by the function. Your .Renviron file should look something like this:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="va">AZURE_OPENAI_TASK</span><span class="op">=</span><span class="st">"your_task_code"</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="va">AZURE_OPENAI_ENDPOINT</span><span class="op">=</span><span class="st">"your_endpoint_url"</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="va">AZURE_OPENAI_DEPLOYMENT_NAME</span><span class="op">=</span><span class="st">"your_deployment_name"</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="va">AZURE_OPENAI_KEY</span><span class="op">=</span><span class="st">"your_api_key"</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="va">AZURE_OPENAI_API_VERSION</span><span class="op">=</span><span class="st">"your_api_version"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li>Save and Close .Renviron: After adding your environment variables, save your .Renviron file and close it. You will need to restart your R session to make sure the new environment variables are loaded properly.</li>
+</ol>
+<p>Remember to replace your_task_code, your_endpoint_url, your_deployment_name, your_api_key, and your_api_version with your actual Azure OpenAI details. You can retrieve these details from your Azure OpenAI service account. For more information about Azure OpenAI configuration, refer to the <a href="https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?tabs=command-line&amp;pivots=rest-api">Microsoft quickstart guide</a>.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="suggested-resources" class="level2">
 <h2 class="anchored" data-anchor-id="suggested-resources">Suggested Resources</h2>
