@@ -1,25 +1,61 @@
 ---
 title: "Generative AI in RStudio"
 subtitle: "Using GitHub Copilot, ChatGPT, and more in your favorite IDE"
+author: "James Wade"
+date: "2024-02-03"
+format:
+  html:
+    toc: true
+theme: 
+  light: flatly
+  dark: darkly
+
 ---
 
 ## The Plan for Today
 
 My plan is to talk as little as possible and let you all play with the tools. I'll give a brief overview of the tools and then we'll jump into an interactive workshop.
 
-It may take a few minutes to setup your environment. The best way to do this is to clone this repo and open the project in RStudio. Here's a link to the repo: https://github.com/jameshwade/chatgpt-copilot-r-workshop.
+It may take a few minutes to setup your environment. The best way to do this is to clone this repo and open the project in RStudio. Here's a link to the repo: [chatgpt-copilot-r-workshop](https://github.com/jameshwade/chatgpt-copilot-r-workshop).
 
-You can also use the following code to install the packages we'll be using today.
+### Clone Workshop Materials
+
+There are two easy ways to clone the repo. You can use RStudio built-in buttons or the `{usethis}` package.
+
+::: {.panel-tabset}
+
+### Interactive with RStudio
+
+To clone the repo, open RStudio and go to `File > New Project > Version Control > Git` and paste in the following URL: <https://github.com/JamesHWade/chatgpt-copilot-r-workshop.git>.
 
 ```{r}
-
-
-```{r}
-1 + 1
+#| echo: false
+#| fig-cap: "Clone git repository with RStudio"
+#| fig-align: "center"
+knitr::include_graphics("media/clone-repo.png")
 ```
+
+### Clone with `{usethis}`
+
+You can also use the following code to clone the packages we'll be using today.
+
+```{r}
+#| eval: FALSE
+# install.packages("usethis")
+require(usethis)
+create_from_github("jameshwade/chatgpt-copilot-r-workshop",
+                   fork = FALSE)
+```
+
+:::
+
+This repo uses `{renv}` to help create a reproducible environment. When you clone and open the package in RStudio, you should be prompted to install the packages.
+
 
 ## Suggested Resources
 
-- [GitHub Copilot in RStudio, it's finally here! by Tom Mock]("https://pos.it/rstudio-copilot)
-- [`{chattr}`](https://github.com/mlverse/chattr)
+- [GitHub Copilot in RStudio, it's finally here!]("https://pos.it/rstudio-copilot)  by Tom Mock, Product Manager of RStudio Workbench
+- [`{gptstudio}`](https://michelnivard.github.io/gptstudio/)
+- [`{gpttools}`](https://jameshwade.github.io/gpttools/)
+- [`{chattr}`](https://github.com/mlverse/chattr) - A package to integrates LLM's with the RStudio IDE by Edgar Ruiz, Posit Software Engineer
 
