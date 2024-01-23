@@ -6,10 +6,9 @@ date: "2024-02-03"
 format:
   html:
     toc: true
-theme: 
-  light: flatly
-  dark: darkly
-
+# theme: 
+#   light: flatly
+#   dark: darkly
 ---
 
 ## The Plan for Today
@@ -24,7 +23,7 @@ There are two easy ways to clone the repo. You can use RStudio built-in buttons 
 
 ::: {.panel-tabset}
 
-### Interactive with RStudio
+### Clone with RStudio
 
 To clone the repo, open RStudio and go to `File > New Project > Version Control > Git` and paste in the following URL: <https://github.com/JamesHWade/chatgpt-copilot-r-workshop.git>.
 
@@ -310,7 +309,7 @@ Remember to replace your_task_code, your_endpoint_url, your_deployment_name, you
 ## Suggested Resources
 
 - [GitHub Copilot in RStudio, it's finally here!]("https://pos.it/rstudio-copilot)  by Tom Mock, Product Manager of RStudio Workbench
-- [`{gptstudio}`](https://michelnivard.github.io/gptstudio/)
-- [`{gpttools}`](https://jameshwade.github.io/gpttools/)
-- [`{chattr}`](https://github.com/mlverse/chattr) - A package to integrates LLM's with the RStudio IDE by Edgar Ruiz, Posit Software Engineer
+- [`{gptstudio}`](https://michelnivard.github.io/gptstudio/) - An R package that integrates LLMs into RStudio
+- [`{gpttools}`](https://jameshwade.github.io/gpttools/) - A sister package to `{gptstudio}` that allows RAG to supplement LLMs
+- [`{chattr}`](https://github.com/mlverse/chattr) - A package from the [mlverse](https://github.com/mlverse) team to integrates LLM's with the RStudio by Edgar Ruiz, Posit Software Engineer
 
