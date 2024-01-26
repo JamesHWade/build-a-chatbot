@@ -25,3 +25,10 @@ $presentation-heading-font: 'Lato', sans-serif;
   color: $theme-yellow;
   font-weight: bold;
 }
+
+.reveal .slide-logo {
+  height: 75px !important;
+  width: 75px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
