@@ -1,0 +1,47 @@
+---
+title: "Generative AI in RStudio"
+subtitle: "Using GitHub Copilot, ChatGPT, & more in your favorite IDE"
+title-slide-attributes:
+  data-background-image: "title-slide-img.png"
+  data-background-size: contain
+  data-background-opacity: "0.4"
+author: "James Wade"
+footer: "GenAI in RStudio | James Wade | R Tunis"
+logo: "media/r-tunis.png"
+format: 
+  revealjs:
+    theme: [default, custom.css]
+    embed-resources: true
+    code-copy: true
+    code-link: true
+---
+
+## Three ways to use it in RStudio
+
+<br>
+
+::: {.r-fit-text .center}
+1.  GitHub Copilot
+2.  RStudio Addins `{gptstudio}`, `{chattr}`, `{gpttools}`
+3.  API Wrappers `{openai}`, `{chattr}`, `{gptstudio}`
+:::
+
+## GitHub Copilot Integration
+
+
+[![](media/mock-copilot-talk.png){width="60%"}](https://youtu.be/TlzMKSE97MQ?si=aqG5UJo3Jy_F9HBb)
+
+::: {.r-fit-text}
+Go watch [Tom Mock's talk](https://youtu.be/TlzMKSE97MQ?si=aqG5UJo3Jy_F9HBb) to learn more Copilot in RStudio.
+:::
+
+## `{gptstudio}`
+
+
+
+## `{chattr}`
+
+
+
+
+## `{gpttools}`

@@ -1,5 +1,33 @@
 [
   {
+    "objectID": "slides_chat-bot.html#bullets",
+    "href": "slides_chat-bot.html#bullets",
+    "title": "Let’s Build a Chatbot",
+    "section": "Bullets",
+    "text": "Bullets\nWhen you click the Render button a document will be generated that includes:\n\nContent authored with markdown\nOutput from executable code"
+  },
+  {
+    "objectID": "slides_chat-bot.html#code",
+    "href": "slides_chat-bot.html#code",
+    "title": "Let’s Build a Chatbot",
+    "section": "Code",
+    "text": "Code\nWhen you click the Render button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\n[1] 2\n\n\n\n\n\nGenAI in RStudio | James Wade | R Tunis"
+  },
+  {
+    "objectID": "slides_gen-ai.html#three-ways-to-use-lms-in-rstudio",
+    "href": "slides_gen-ai.html#three-ways-to-use-lms-in-rstudio",
+    "title": "Generative AI in RStudio",
+    "section": "Three Ways to Use LMs in RStudio",
+    "text": "Three Ways to Use LMs in RStudio\n\n\nGitHub Copilot\nRStudio Addins {gptstudio}, {chattr}, {gpttools}\nAPI Wrappers {openai}, {chattr}, {gptstudio}"
+  },
+  {
+    "objectID": "slides_gen-ai.html#github-copilot",
+    "href": "slides_gen-ai.html#github-copilot",
+    "title": "Generative AI in RStudio",
+    "section": "GitHub Copilot",
+    "text": "GitHub Copilot\n\n\n\n\n\n\nGo watch this talk for more from Tom Mock, Product Manager for Posit Workbench.\n\n\n\n\nGenAI in RStudio | James Wade | R Tunis"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Generative AI in RStudio",
@@ -32,27 +60,181 @@
     "href": "index.html#slides-for-today",
     "title": "Generative AI in RStudio",
     "section": "Slides for Today",
-    "text": "Slides for Today\n\n\n\n\n\n View all slides in new window"
+    "text": "Slides for Today\n\n\n\n\n\n\n\n View all slides in new window"
   },
   {
-    "objectID": "slides.html#quarto",
-    "href": "slides.html#quarto",
+    "objectID": "slides_gen-ai.html#three-ways-to-use-it-in-rstudio",
+    "href": "slides_gen-ai.html#three-ways-to-use-it-in-rstudio",
     "title": "Generative AI in RStudio",
-    "section": "Quarto",
-    "text": "Quarto\nQuarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see https://quarto.org/docs/presentations/."
+    "section": "Three ways to use it in RStudio",
+    "text": "Three ways to use it in RStudio\n\n\n\nGitHub Copilot\nRStudio Addins {gptstudio}, {chattr}, {gpttools}\nAPI Wrappers {openai}, {chattr}, {gptstudio}"
   },
   {
-    "objectID": "slides.html#bullets",
-    "href": "slides.html#bullets",
+    "objectID": "slides_gen-ai.html#github-copilot-integration",
+    "href": "slides_gen-ai.html#github-copilot-integration",
     "title": "Generative AI in RStudio",
-    "section": "Bullets",
-    "text": "Bullets\nWhen you click the Render button a document will be generated that includes:\n\nContent authored with markdown\nOutput from executable code"
+    "section": "GitHub Copilot Integration",
+    "text": "GitHub Copilot Integration\n\n\nGo watch Tom Mock’s talk to learn more Copilot in RStudio."
   },
   {
-    "objectID": "slides.html#code",
-    "href": "slides.html#code",
+    "objectID": "slides_gen-ai.html#gptstudio",
+    "href": "slides_gen-ai.html#gptstudio",
     "title": "Generative AI in RStudio",
-    "section": "Code",
-    "text": "Code\nWhen you click the Render button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\n[1] 2\n\n\n\n\n\n\nGenAI in RStudio | James Wade | R Tunis"
+    "section": "{gptstudio}",
+    "text": "{gptstudio}"
+  },
+  {
+    "objectID": "slides_gen-ai.html#chattr",
+    "href": "slides_gen-ai.html#chattr",
+    "title": "Generative AI in RStudio",
+    "section": "{chattr}",
+    "text": "{chattr}"
+  },
+  {
+    "objectID": "slides_gen-ai.html#gpttools",
+    "href": "slides_gen-ai.html#gpttools",
+    "title": "Generative AI in RStudio",
+    "section": "{gpttools}",
+    "text": "{gpttools}\n\n\n\nGenAI in RStudio | James Wade | R Tunis"
+  },
+  {
+    "objectID": "slides_chat-bot.html#examples-from-openai-documentation",
+    "href": "slides_chat-bot.html#examples-from-openai-documentation",
+    "title": "Let’s Build a Chatbot",
+    "section": "Examples from OpenAI Documentation",
+    "text": "Examples from OpenAI Documentation\ncurl https://api.openai.com/v1/chat/completions \\\n-H \"Content-Type: application/json\" \\\n-H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n-d '{\n\"model\": \"gpt-3.5-turbo\",\n\"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant.\"}, {\"role\": \"user\", \"content\": \"Hello!\"}]\n}'"
+  },
+  {
+    "objectID": "slides_chat-bot.html#load-packages",
+    "href": "slides_chat-bot.html#load-packages",
+    "title": "Let’s Build a Chatbot",
+    "section": "Load Packages",
+    "text": "Load Packages\nI have already installed {httr2}, {tidyverse}.\n\nlibrary(httr2)\nlibrary(purrr)"
+  },
+  {
+    "objectID": "slides_chat-bot.html#api-query-function",
+    "href": "slides_chat-bot.html#api-query-function",
+    "title": "Let’s Build a Chatbot",
+    "section": "API Query Function",
+    "text": "API Query Function\n\nlibrary(httr2)\nlibrary(purrr)\n\nchat &lt;- function(message, api_key = Sys.getenv(\"OPENAI_API_KEY\")) {\n  user_message &lt;- list(list(role = \"user\", content = message))\n  body &lt;- list(model = \"gpt-3.5-turbo\",\n               messages = user_message)\n  resp &lt;-\n    request(\"https://api.openai.com/v1\") |&gt; \n    req_url_path_append(\"chat/completions\") |&gt; \n    req_auth_bearer_token(token = api_key) |&gt; \n    req_body_json(body) |&gt; \n    req_perform() |&gt; \n    resp_body_json(simplifyVector = TRUE)\n  \n  resp |&gt; \n    pluck(\"choices\", \"message\", \"content\")\n}"
+  },
+  {
+    "objectID": "slides_chat-bot.html#test-api",
+    "href": "slides_chat-bot.html#test-api",
+    "title": "Let’s Build a Chatbot",
+    "section": "Test API",
+    "text": "Test API\n\nchat(\"What is your favorite color?\")\n\n[1] \"As an AI, I don't have personal preferences or favorites. However, I can assist you in any way you need regarding colors!\"\n\n\n–\n\nchat(\"Show me a simple ggplot2 example. Only code with comments. Be brief.\")\n\n[1] \"Here is a simple example of using ggplot2 in R:\\n\\n```R\\n# Load the ggplot2 library\\nlibrary(ggplot2)\\n\\n# Create a dataframe\\ndata &lt;- data.frame(\\n  x = c(1, 2, 3, 4, 5),\\n  y = c(2, 4, 6, 8, 10)\\n)\\n\\n# Create a scatterplot using ggplot\\nggplot(data, aes(x = x, y = y)) + \\n  geom_point()\\n```\\n\\nExplanation:\\n- The ggplot2 library is loaded using `library(ggplot2)`.\\n- A dataframe `data` is created with two columns, x and y.\\n- The ggplot function is used to create a base plot, specifying the data and aesthetic mappings with `aes(x = x, y = y)`.\\n- The `+` operator is used to add layers to the plot. In this case, `geom_point()` is added to create a scatterplot using the default point geometry.\""
+  },
+  {
+    "objectID": "slides_chat-bot.html#an-example-from-openai-documentation",
+    "href": "slides_chat-bot.html#an-example-from-openai-documentation",
+    "title": "Let’s Build a Chatbot",
+    "section": "An Example from OpenAI Documentation",
+    "text": "An Example from OpenAI Documentation\ncurl https://api.openai.com/v1/chat/completions \\\n-H \"Content-Type: application/json\" \\\n-H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n-d '{\n\"model\": \"gpt-3.5-turbo\",\n\"messages\": [{\"role\": \"system\", \"content\": \"You are a helpful assistant.\"}, {\"role\": \"user\", \"content\": \"Hello!\"}]\n}'"
+  },
+  {
+    "objectID": "slides_chat-bot.html#sending-messages-to-openai",
+    "href": "slides_chat-bot.html#sending-messages-to-openai",
+    "title": "Let’s Build a Chatbot",
+    "section": "Sending Messages to Openai",
+    "text": "Sending Messages to Openai\nThe message body:\n\n{\n  \"model\": \"gpt-3.5-turbo\",\n  \"messages\": [\n    {\"role\": \"system\", \"content\": \"You are a helpful assistant.\"},\n    {\"role\": \"user\", \"content\": \"Hello!\"}\n  ]\n}"
+  },
+  {
+    "objectID": "slides_chat-bot.html#send-requests-with-httr2",
+    "href": "slides_chat-bot.html#send-requests-with-httr2",
+    "title": "Let’s Build a Chatbot",
+    "section": "Send requests with {httr2}",
+    "text": "Send requests with {httr2}\n\nlibrary(httr2)\nlibrary(purrr)"
+  },
+  {
+    "objectID": "slides_chat-bot.html#send-requests-with-httr2-1",
+    "href": "slides_chat-bot.html#send-requests-with-httr2-1",
+    "title": "Let’s Build a Chatbot",
+    "section": "Send requests with {httr2}",
+    "text": "Send requests with {httr2}\n\nlibrary(httr2)\nlibrary(purrr)\n\n# construct the message body\nuser_message &lt;- list(list(role = \"user\", content = \"Hello\"))\nbody &lt;- list(model = \"gpt-3.5-turbo\", messages = user_message)\napi_key &lt;- Sys.getenv(\"OPENAI_API_KEY\")"
+  },
+  {
+    "objectID": "slides_chat-bot.html#send-requests-with-httr2-2",
+    "href": "slides_chat-bot.html#send-requests-with-httr2-2",
+    "title": "Let’s Build a Chatbot",
+    "section": "Send requests with {httr2}",
+    "text": "Send requests with {httr2}\n\nlibrary(httr2)\nlibrary(purrr)\n\n# construct the message body\nuser_message &lt;- list(list(role = \"user\", content = \"Hello!\"))\nbody &lt;- list(model = \"gpt-3.5-turbo\", messages = user_message)\napi_key &lt;- Sys.getenv(\"OPENAI_API_KEY\")\n\n# send the request\nresp &lt;-\n  request(\"https://api.openai.com/v1\") |&gt; \n  req_url_path_append(\"chat/completions\") |&gt; \n  req_auth_bearer_token(token = api_key) |&gt; \n  req_body_json(body) |&gt; \n  req_perform()"
+  },
+  {
+    "objectID": "slides_chat-bot.html#send-requests-with-httr2-3",
+    "href": "slides_chat-bot.html#send-requests-with-httr2-3",
+    "title": "Let’s Build a Chatbot",
+    "section": "Send requests with {httr2}",
+    "text": "Send requests with {httr2}\n\n# construct the message body\nuser_message &lt;- list(list(role = \"user\", content = \"Hello!\"))\nbody &lt;- list(model = \"gpt-3.5-turbo\", messages = user_message)\napi_key &lt;- Sys.getenv(\"OPENAI_API_KEY\")\n\n# send the request\nresp &lt;-\n  request(\"https://api.openai.com/v1\") |&gt;\n  req_url_path_append(\"chat/completions\") |&gt; \n  req_auth_bearer_token(token = api_key) |&gt; \n  req_body_json(body) |&gt; \n  req_perform()\n\n# process the repsonse\nresp |&gt;\n  resp_body_json(simplifyVector = TRUE) |&gt; \n  pluck(\"choices\", \"message\", \"content\")\n\n[1] \"Hello! How can I assist you today?\""
+  },
+  {
+    "objectID": "slides_chat-bot.html#wrapping-it-in-a-function",
+    "href": "slides_chat-bot.html#wrapping-it-in-a-function",
+    "title": "Let’s Build a Chatbot",
+    "section": "Wrapping it in a function",
+    "text": "Wrapping it in a function\n\nlibrary(httr2)\nlibrary(purrr)\n\nchat &lt;- function(message, api_key = Sys.getenv(\"OPENAI_API_KEY\")) {\n  user_message &lt;- list(list(role = \"user\", content = message))\n  body &lt;- list(model = \"gpt-3.5-turbo\",\n               messages = user_message)\n  resp &lt;-\n    request(\"https://api.openai.com/v1\") |&gt; \n    req_url_path_append(\"chat/completions\") |&gt; \n    req_auth_bearer_token(token = api_key) |&gt; \n    req_body_json(body) |&gt; \n    req_perform()\n  \n  resp |&gt; \n    resp_body_json(simplifyVector = TRUE) |&gt; \n    pluck(\"choices\", \"message\", \"content\")\n}"
+  },
+  {
+    "objectID": "slides_chat-bot.html#constructing-messages-for-openai",
+    "href": "slides_chat-bot.html#constructing-messages-for-openai",
+    "title": "Let’s Build a Chatbot",
+    "section": "Constructing Messages for OpenAI",
+    "text": "Constructing Messages for OpenAI\nThe message body:\n\n{\n  \"model\": \"gpt-3.5-turbo\",\n  \"messages\": [\n    {\"role\": \"system\", \"content\": \"You are a helpful assistant.\"},\n    {\"role\": \"user\", \"content\": \"Hello!\"}\n  ]\n}"
+  },
+  {
+    "objectID": "slides_chat-bot.html#examining-the-response",
+    "href": "slides_chat-bot.html#examining-the-response",
+    "title": "Let’s Build a Chatbot",
+    "section": "Examining the Response",
+    "text": "Examining the Response\n\nresp |&gt; \n  resp_body_json(simplifyVector = TRUE)\n\n$id\n[1] \"chatcmpl-8qqJowQNNZnsgNK3F7VfG0nQKrF1y\"\n\n$object\n[1] \"chat.completion\"\n\n$created\n[1] 1707604860\n\n$model\n[1] \"gpt-3.5-turbo-0613\"\n\n$choices\n  index message.role                    message.content logprobs finish_reason\n1     0    assistant Hello! How can I assist you today?       NA          stop\n\n$usage\n$usage$prompt_tokens\n[1] 9\n\n$usage$completion_tokens\n[1] 9\n\n$usage$total_tokens\n[1] 18\n\n\n$system_fingerprint\nNULL"
+  },
+  {
+    "objectID": "slides_chat-bot.html#chat",
+    "href": "slides_chat-bot.html#chat",
+    "title": "Let’s Build a Chatbot",
+    "section": "chat()",
+    "text": "chat()\nchat &lt;- function(user_message, \n                 history = NULL,\n                 system_prompt = c(\"general\", \"code\"),\n                 api_key = Sys.getenv(\"OPENAI_API_KEY\")) {\n  system   &lt;- get_system_prompt(system_prompt)\n  prompt   &lt;- prepare_prompt(user_message, system_prompt, history)\n  base_url &lt;- \"https://api.openai.com/v1\"\n  body     &lt;- list(model = \"gpt-3.5-turbo\",\n                   messages = prompt)\n  \n  # &lt;httr2_request_pipeline&gt;\n  # &lt;process_response&gt;\n}"
+  },
+  {
+    "objectID": "slides_chat-bot.html#helper-functions",
+    "href": "slides_chat-bot.html#helper-functions",
+    "title": "Let’s Build a Chatbot",
+    "section": "Helper Functions",
+    "text": "Helper Functions\nget_system_prompt()\nget_system_prompt &lt;- function(system = c(\"general\", \"code\")) {\n  instructions &lt;- \n    switch(system,\n           \"general\" = \"You are a helpful assistant.\",\n           \"code\"    = \"&lt;code_assistant_prompt&gt;\")\n  list(list(role = \"system\", content = instructions))\n}\n\nprepare_prompt()\nprepare_prompt &lt;- function(user_message, system_prompt, history) {\n  user_prompt &lt;-  list(list(role = \"user\", content = user_message))\n  c(system_prompt, history, user_prompt) |&gt; compact()\n}\n\n\n\nLet’s Build a Chatbot | James Wade | R Tunis & R Ladies Rome"
+  },
+  {
+    "objectID": "slides_chat-bot.html#trying-out-chat",
+    "href": "slides_chat-bot.html#trying-out-chat",
+    "title": "Let’s Build a Chatbot",
+    "section": "Trying out chat()",
+    "text": "Trying out chat()\n\nchat(\"What is your favorite color?\")\n\n[1] \"As an artificial intelligence, I do not have personal preferences or the ability to perceive colors.\"\n\n\n–\n\nchat(\"Show me a simple ggplot2 example. Only code with comments. Be brief.\")\n\n[1] \"Sure! Here is a simple example using ggplot2 to plot the distribution of a continuous variable:\\n\\n```R\\nlibrary(ggplot2)\\n\\n# Create a dataframe with a continuous variable\\ndata &lt;- data.frame(\\n  x = rnorm(100)\\n)\\n\\n# Plot a histogram of the variable\\nggplot(data, aes(x)) +\\n  geom_histogram()\\n```\\n\\nThis code first loads the ggplot2 library. Then, a dataframe `data` is created with a single continuous variable called `x`, which is generated by sampling from a normal distribution. Finally, the `ggplot()` function is used to create a plot, specifying the `data` dataframe and the variable `x` to be plotted as a histogram using the `geom_histogram()` function.\""
+  },
+  {
+    "objectID": "slides_chat-bot.html#a-prettier-reponse",
+    "href": "slides_chat-bot.html#a-prettier-reponse",
+    "title": "Let’s Build a Chatbot",
+    "section": "A Prettier Reponse",
+    "text": "A Prettier Reponse\n\nanswer &lt;- chat(\"Make a ggplot2 in an RMarkdown document and briefly tell me\n               what you made.\")\nanswer |&gt; cat()\n\n```{r, fig.width=5, fig.height=4}\nlibrary(ggplot2)\n\n# Create a dataset\ndata &lt;- data.frame(\n  x = c(1, 2, 3, 4, 5),\n  y = c(1, 4, 9, 16, 25)\n)\n\n# Create a scatter plot\nggplot(data, aes(x, y)) +\n  geom_point() +\n  labs(\n    title = \"Scatter Plot\",\n    x = \"X\",\n    y = \"Y\"\n  )\n```\n\nIn the above code, I created a scatter plot using `ggplot2` in an RMarkdown document. The dataset consists of five data points with x-coordinates being the numbers 1 to 5 and y-coordinates being the squared values of their respective x-coordinates. The scatter plot displays these data points as individual points on the graph. The title of the plot is \"Scatter Plot,\" with the x-axis labeled as \"X\" and the y-axis labeled as \"Y.\""
+  },
+  {
+    "objectID": "slides_chat-bot.html#an-even-prettier-response",
+    "href": "slides_chat-bot.html#an-even-prettier-response",
+    "title": "Let’s Build a Chatbot",
+    "section": "An Even Prettier Response",
+    "text": "An Even Prettier Response\n\nanswer |&gt; shiny::markdown()\n\nlibrary(ggplot2)\n\n# Create a dataset\ndata &lt;- data.frame(\n  x = c(1, 2, 3, 4, 5),\n  y = c(1, 4, 9, 16, 25)\n)\n\n# Create a scatter plot\nggplot(data, aes(x, y)) +\n  geom_point() +\n  labs(\n    title = \"Scatter Plot\",\n    x = \"X\",\n    y = \"Y\"\n  )\n\nIn the above code, I created a scatter plot using ggplot2 in an RMarkdown document. The dataset consists of five data points with x-coordinates being the numbers 1 to 5 and y-coordinates being the squared values of their respective x-coordinates. The scatter plot displays these data points as individual points on the graph. The title of the plot is \"Scatter Plot,\" with the x-axis labeled as \"X\" and the y-axis labeled as \"Y.\""
+  },
+  {
+    "objectID": "slides_chat-bot.html#some-helper-functions",
+    "href": "slides_chat-bot.html#some-helper-functions",
+    "title": "Let’s Build a Chatbot",
+    "section": "Some Helper Functions",
+    "text": "Some Helper Functions"
+  },
+  {
+    "objectID": "slides_chat-bot.html#creating-openai-api-calls",
+    "href": "slides_chat-bot.html#creating-openai-api-calls",
+    "title": "Let’s Build a Chatbot",
+    "section": "Creating OpenAI API Calls",
+    "text": "Creating OpenAI API Calls"
   }
 ]

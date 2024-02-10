@@ -324,7 +324,7 @@ slide_buttons <- function(slide_id) {
 #| echo: false
 
 xaringanExtra::embed_xaringan(
-  "slides.html",
+  "slides_gen-ai.html",
   ratio = "16:9",
   border = "none",
   margin = "0 auto"
