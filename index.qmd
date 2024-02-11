@@ -10,7 +10,7 @@ format:
 
 ## The Plan for Today
 
-My plan is to talk as little as possible and let you all play with the tools. I'll give a brief overview of the tools and then we'll jump into an interactive workshop.
+My plan is to talk as little as possible and let you all play with the tools. I'll give a brief overview of the tools and then we'll jump into an interactive workshop where we will build a chatbot.
 
 It may take a few minutes to setup your environment. The best way to do this is to clone this repo and open the project in RStudio. Here's a link to the repo: [chatgpt-copilot-r-workshop](https://github.com/jameshwade/chatgpt-copilot-r-workshop).
 
@@ -49,7 +49,7 @@ This repo uses `{renv}` to help create a reproducible environment. When you clon
 
 ```{r}
 #| eval: FALSE
-# install.packages("renv)
+# install.packages("renv")
 renv::restore()
 ```
 
@@ -319,6 +319,8 @@ slide_buttons <- function(slide_id) {
 }
 ```
 
+### Part 1: Generative AI in RStudio
+
 ```{r}
 #| results: 'asis'
 #| echo: false
@@ -330,5 +332,21 @@ xaringanExtra::embed_xaringan(
   margin = "0 auto"
 )
 
-slide_buttons("slides")
+slide_buttons("slides_gen-ai")
+```
+
+### Part 2: Let's Build a Chatbot
+
+```{r}
+#| results: 'asis'
+#| echo: false
+
+xaringanExtra::embed_xaringan(
+  "slides_chat-bot.html",
+  ratio = "16:9",
+  border = "none",
+  margin = "0 auto"
+)
+
+slide_buttons("slides_chat-bot")
 ```
