@@ -38,8 +38,8 @@ chat <- function(user_message,
     description <- httr2::resp_status_desc(response)
 
     cli::cli_warn(message = c(
-      "x" = glue::glue("Cohere API request failed. Error {status} - {description}"),
-      "i" = "Visit the Cohere API documentation for more details"
+      "x" = glue::glue("OpenAI API request failed. Error {status} - {description}"),
+      "i" = "Visit the OpenAI API documentation for more details"
     ))
 
     error_msg <-
