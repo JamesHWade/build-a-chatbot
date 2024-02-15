@@ -15,6 +15,6 @@ get_context <- function(prompt, index, k = 4) {
 
   glue::glue("{context}
              Prompt from user:
-             {prompt}")
+             {prompt}") |> cli::cat_print()
 }
 

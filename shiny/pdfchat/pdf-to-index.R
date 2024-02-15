@@ -1,7 +1,8 @@
 ingest_pdf <- function(file_path, source = basename(file_path), link = NULL, api_key) {
   text <- pdftools::pdf_text(file_path) |>
     readr::read_lines() |>
-    stringr::str_c(collapse = " ")
+    stringr::str_c(collapse = " ") |>
+    stringr::str_remove_all("\\.\\.\\.|\\ \\ \\ ")
 
   tibble::tibble(
     text = text,
@@ -48,7 +49,6 @@ ingest_pdf_server <- function(id, rv) {
 
     observeEvent(input$ingest, {
       req(input$file)
-      cli::cli_alert_info("API Key {rv$api_key()}")
       req(rv$api_key())
       files <- input$file$datapath
       new_pdfs <-
