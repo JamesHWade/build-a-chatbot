@@ -1,5 +1,5 @@
 ---
-title: "Generative AI in RStudio"
+title: "Build a Chatbot with OpenAI, Shiny, and RStudio"
 subtitle: "Using GitHub Copilot, ChatGPT, and more in your favorite IDE"
 author: "James Wade"
 date: "2024-02-03"
@@ -12,7 +12,7 @@ format:
 
 My plan is to talk as little as possible and let you all play with the tools. I'll give a brief overview of the tools and then we'll jump into an interactive workshop where we will build a chatbot.
 
-It may take a few minutes to setup your environment. The best way to do this is to clone this repo and open the project in RStudio. Here's a link to the repo: [chatgpt-copilot-r-workshop](https://github.com/jameshwade/chatgpt-copilot-r-workshop).
+It may take a few minutes to setup your environment. The best way to do this is to clone this repo and open the project in RStudio. Here's a link to the repo: [build-a-chatbot](https://github.com/jameshwade/build-a-chatbot).
 
 ### Clone Workshop Materials
 
@@ -22,7 +22,7 @@ There are two easy ways to clone the repo. You can use RStudio built-in buttons 
 
 ### Clone with RStudio
 
-To clone the repo, open RStudio and go to `File > New Project > Version Control > Git` and paste in the following URL: <https://github.com/JamesHWade/chatgpt-copilot-r-workshop.git>.
+To clone the repo, open RStudio and go to `File > New Project > Version Control > Git` and paste in the following URL: <https://github.com/JamesHWade/build-a-chatbot>
 
 ```{r}
 #| echo: false
