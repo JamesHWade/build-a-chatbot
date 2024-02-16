@@ -39,7 +39,7 @@ You can also use the following code to clone the packages we'll be using today.
 #| eval: FALSE
 # install.packages("usethis")
 require(usethis)
-create_from_github("jameshwade/chatgpt-copilot-r-workshop",
+create_from_github("jameshwade/build-a-chatbot",
                    fork = FALSE)
 ```
 

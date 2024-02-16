@@ -10,12 +10,15 @@ $theme-yellow: #F4BA02;
 $body-bg: $theme-darkblue;
 $body-color: $theme-white;
 $link-color: $theme-blue;
-$presentation-heading-color: lighten($theme-blue, 15%);
+$presentation-heading-color: lighten($theme-blue, 10%);
+$presentation-font-size-root: 36px;
 
 $font-family-sans-serif: 'Roboto', sans-serif;
 $presentation-heading-font: 'Lato', sans-serif;
 
+
 /*-- scss:rules --*/
+
 .blue {
   color: $theme-blue;
   font-weight: bold;

@@ -1,10 +1,10 @@
 ---
 title: "Let's Build a Chatbot"
-subtitle: "Using GitHub Copilot, ChatGPT, & more in your favorite IDE"
+subtitle: "Using Shiny, OpenAI, and RStudio to Build a Chatbot"
 title-slide-attributes:
-  data-background-image: "media/title-slide-img.png"
+  data-background-image: "media/Famous Landmarks Collage.jpeg"
   data-background-size: contain
-  data-background-opacity: "0.4"
+  data-background-opacity: "0.6"
 author: "James Wade"
 footer: "Let's Build a Chatbot | James Wade | R Tunis & R Ladies Rome"
 logo: "media/r-tunis.png"
@@ -16,10 +16,12 @@ execute:
   freeze: true
 ---
 
-## Creating OpenAI API Calls {.center background-image="media/r-tunis.png" background-opacity="0.8"}
+## API Calls {.center background-image="media/chatbot-fun2.jpeg" background-position="right" background-size="contain" background-repeat="no-repeat"}
 
 
 ## An Example from OpenAI Documentation
+
+<br>
 
 ```bash
 curl https://api.openai.com/v1/chat/completions \
@@ -32,6 +34,8 @@ curl https://api.openai.com/v1/chat/completions \
 ```
 
 ## Constructing Messages for OpenAI
+
+<br>
 
 The message body:
 
@@ -64,7 +68,6 @@ library(purrr)
 # construct the message body
 user_message <- list(list(role = "user", content = "Hello"))
 body <- list(model = "gpt-3.5-turbo", messages = user_message)
-api_key <- Sys.getenv("OPENAI_API_KEY")
 ```
 
 
@@ -78,13 +81,12 @@ library(purrr)
 # construct the message body
 user_message <- list(list(role = "user", content = "Hello!"))
 body <- list(model = "gpt-3.5-turbo", messages = user_message)
-api_key <- Sys.getenv("OPENAI_API_KEY")
 
 # send the request
 resp <-
   request("https://api.openai.com/v1") |> 
   req_url_path_append("chat/completions") |> 
-  req_auth_bearer_token(token = api_key) |> 
+  req_auth_bearer_token(token = Sys.getenv("OPENAI_API_KEY")) |> 
   req_body_json(body) |> 
   req_perform()
 ```
@@ -93,20 +95,22 @@ resp <-
 
 ```{r}
 #| echo: true
+library(httr2)
+library(purrr)
+
 # construct the message body
 user_message <- list(list(role = "user", content = "Hello!"))
 body <- list(model = "gpt-3.5-turbo", messages = user_message)
-api_key <- Sys.getenv("OPENAI_API_KEY")
 
 # send the request
 resp <-
   request("https://api.openai.com/v1") |>
   req_url_path_append("chat/completions") |> 
-  req_auth_bearer_token(token = api_key) |> 
+  req_auth_bearer_token(token = Sys.getenv("OPENAI_API_KEY")) |> 
   req_body_json(body) |> 
   req_perform()
 
-# process the repsonse
+# process the response
 resp |>
   resp_body_json(simplifyVector = TRUE) |> 
   pluck("choices", "message", "content")
@@ -125,7 +129,7 @@ resp |>
 
 ```{r}
 #| echo: true
-#| code-line-numbers: "4-6|8-12|15-17"
+#| code-line-numbers: "4-7|8-13|15-17"
 library(httr2)
 library(purrr)
 
@@ -146,6 +150,8 @@ chat <- function(message, api_key = Sys.getenv("OPENAI_API_KEY")) {
 }
 ```
 
+## Let's Try it Out {.center background-image="media/chatbot-fun.jpeg" background-position="right" background-size="contain" background-repeat="no-repeat"}
+
 ## Trying out `chat()`
 
 ```{r}
@@ -153,14 +159,16 @@ chat <- function(message, api_key = Sys.getenv("OPENAI_API_KEY")) {
 chat("What is your favorite color?")
 ```
 
---
+<br>
+
+. . . 
 
 ```{r}
 #| echo: true
 chat("Show me a simple ggplot2 example. Only code with comments. Be brief.")
 ```
 
-## A Prettier Reponse
+## A Prettier Response
 
 ```{r}
 #| echo: true
@@ -171,18 +179,21 @@ answer |> cat()
 
 ## An Even Prettier Response
 
-```{r}
-#| echo: true
+```{.r}
 answer |> shiny::markdown()
 ```
 
-## Some Helper Functions {.center}
+::: {.smaller}
+```{r}
+answer |> shiny::markdown()
+```
+:::
 
-![](title-slide-img.png){.absolute top="-10%" right="-10%" height="500%" style="max-height: unset;"}
+## Helper Functions {.center background-image="media/chatbot-fun3.png" background-position="right" background-size="contain" background-repeat="no-repeat"}
 
 ## `chat()`
 
-```{.r code-line-numbers="2|3|4|5|6"}
+```{.r code-line-numbers="|2|3|4|5|6"}
 chat <- function(user_message, 
                  history = NULL,
                  system_prompt = c("general", "code"),
@@ -213,6 +224,7 @@ get_system_prompt <- function(system = c("general", "code")) {
 ```
 
 <br>
+. . .
 
 ### `prepare_prompt()`
 
