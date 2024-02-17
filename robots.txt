@@ -1,1 +1,1 @@
-Sitemap: https://JamesHWade.github.io/build-a-chatbot/sitemap.xml
+Sitemap: https://JamesHWade.github.io/chatgpt-copilot-r-workshop/sitemap.xml
