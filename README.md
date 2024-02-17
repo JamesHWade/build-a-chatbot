@@ -1,6 +1,6 @@
 # Build a Chatbot with OpenAI, Shiny, and RStudio
 
-This workshop will guide you through building your own chatbot using cutting-edge AI services integrated into RStudio. You can access the workshop website at [](https://jameshwade.github.io/build-a-chatbot/).
+This workshop will guide you through building your own chatbot using cutting-edge AI services integrated into RStudio. You can access the workshop website [here](https://jameshwade.github.io/build-a-chatbot/).
 
 ## What You'll Learn
 
