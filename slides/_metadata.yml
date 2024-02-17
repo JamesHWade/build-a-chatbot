@@ -1,0 +1,4 @@
+format:
+  revealjs:
+    theme: [default, custom.css]
+    embed-resources: true

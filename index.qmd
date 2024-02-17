@@ -28,7 +28,7 @@ To clone the repo, open RStudio and go to `File > New Project > Version Control 
 #| echo: false
 #| fig-cap: "Clone git repository with RStudio"
 #| fig-align: "center"
-knitr::include_graphics("media/clone-repo.png")
+knitr::include_graphics("slides/media/clone-repo.png")
 ```
 
 ### Clone with `{usethis}`
@@ -326,13 +326,13 @@ slide_buttons <- function(slide_id) {
 #| echo: false
 
 xaringanExtra::embed_xaringan(
-  "slides_gen-ai.html",
+  "slides/slides_gen-ai.html",
   ratio = "16:9",
   border = "none",
   margin = "0 auto"
 )
 
-slide_buttons("slides_gen-ai")
+slide_buttons("slides/slides_gen-ai")
 ```
 
 ### Part 2: Let's Build a Chatbot
@@ -342,11 +342,11 @@ slide_buttons("slides_gen-ai")
 #| echo: false
 
 xaringanExtra::embed_xaringan(
-  "slides_chat-bot.html",
+  "slides/slides_chat-bot.html",
   ratio = "16:9",
   border = "none",
   margin = "0 auto"
 )
 
-slide_buttons("slides_chat-bot")
+slide_buttons("slides/slides_chat-bot")
 ```
