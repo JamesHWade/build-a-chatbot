@@ -41,7 +41,8 @@ ui <- page_fillable(
     ),
     layout_sidebar(
       sidebar = sidebar(
-        ingest_pdf_ui("pdfs")
+        ingest_pdf_ui("pdfs"),
+        width = "300px"
       ),
       uiOutput("instructions"),
       uiOutput("chat_history"),
