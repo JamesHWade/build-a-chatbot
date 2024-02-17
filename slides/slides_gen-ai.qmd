@@ -16,13 +16,21 @@ format:
     code-link: true
     margin: 0.05
     fig-align: center
+execute:
+  freeze: true
 ---
 
-## Three ways to use it in RStudio
+##  {.center background-image="media/michigan-vs-tunisia.png" background-size="contain" background-repeat="no-repeat"}
+
+##  {.center background-image="media/my-life-lately2.png" background-size="contain" background-repeat="no-repeat"}
+
+##  {.center background-image="media/magic-laptop.png" background-size="contain" background-repeat="no-repeat"}
+
+## Three ways to use GenAI in RStudio {.center}
 
 <br>
 
-::: {.r-fit-text .center}
+::: {.r-fit-text .center .incremental}
 1.  GitHub Copilot
 2.  RStudio Addins `{gptstudio}`, `{chattr}`, `{gpttools}`
 3.  API Wrappers `{openai}`, `{chattr}`, `{gptstudio}`
@@ -32,56 +40,55 @@ format:
 
 [![](media/mock-copilot-talk.png){width="60%" fig-align="center"}](https://youtu.be/TlzMKSE97MQ?si=aqG5UJo3Jy_F9HBb)
 
-::: {.r-fit-text}
+::: r-fit-text
 Go watch [Tom Mock's talk](https://youtu.be/TlzMKSE97MQ?si=aqG5UJo3Jy_F9HBb) to learn more Copilot in RStudio.
 :::
 
-## 'Trust' but Verify 
+## 'Trust' but Verify
 
 ::: {.incremental .r-fit-text}
-
-- Generative AI doesn’t have a ‘brain’ or general intelligence
-- It’s just a model that’s been trained on a lot of data
-- It’s not always right, appropriate, or optimal
-- It can make up things that aren’t true, or use code that doesn’t actually exist (or run!)
-- So it’s important to verify the output before using it
-- But we can use it to quickly experiment and maybe provide a novel direction  
-  (basically “prompt” ourselves and our own knowledge)
+-   Generative AI doesn’t have a ‘brain’ or general intelligence
+-   It’s just a model that’s been trained on a lot of data
+-   It’s not always right, appropriate, or optimal
+-   It can make up things that aren’t true, or use code that doesn’t actually exist (or run!)
+-   So it’s important to verify the output before using it
+-   But we can use it to quickly experiment and maybe provide a novel direction\
+    (basically “prompt” ourselves and our own knowledge)
 :::
 
-::: {.aside}
+::: aside
 Slides Adapted from [Tom Mock's talk](https://colorado.posit.co/rsc/rstudio-copilot/)
 :::
 
 ## What is Copilot
 
 ::: {.smaller}
-> GitHub Copilot is an AI pair programmer that offers autocomplete-style suggestions and real-time hints for the code you are writing by providing suggestions as “ghost text” based on the context of the surrounding code - **GitHub Copilot docs**
+> GitHub Copilot is an AI pair programmer that offers [**autocomplete-style suggestions**]{.yellow} and real-time hints for the code you are writing by providing [**suggestions as “ghost text”**]{.yellow} based on the context of the surrounding code - **GitHub Copilot docs**
 :::
 
-. . . 
+. . .
 
-:::: {.columns}
-
-::: {.column width="40%" .r-fit-text}
+::: columns
+::: {.column .r-fit-text width="40%"}
 ### Autocomplete
-- Parses code and environment
-- Supplies possible completions
-- Static set of completions in popup
-- IDE provided from local disk
+
+-   Parses code and environment
+-   Supplies possible completions
+-   Static set of completions in popup
+-   IDE provided from local disk
 :::
 
-::: {.column width="60%" .r-fit-text}
+::: {.column .r-fit-text width="60%"}
 ### Copilot
-- Parses code, environment and training data
-- Supplies likely completions
-- Dynamic set of completions via ‘ghost text’
-- Generative AI provided via API endpoint
+
+-   Parses code, environment and training data
+-   Supplies likely completions
+-   Dynamic set of completions via ‘ghost text’
+-   Generative AI provided via API endpoint
+:::
 :::
 
-::::
-
-::: {.aside}
+::: aside
 Slides Adapted from [Tom Mock's talk](https://colorado.posit.co/rsc/rstudio-copilot/)
 :::
 
@@ -89,11 +96,11 @@ Slides Adapted from [Tom Mock's talk](https://colorado.posit.co/rsc/rstudio-copi
 
 [![](media/autocomplete-example.png){width="80%" fig-align="center"}](https://colorado.posit.co/rsc/rstudio-copilot/)
 
-. . . 
+. . .
 
 [![](media/copilot-example.png){width="80%" fig-align="center"}](https://colorado.posit.co/rsc/rstudio-copilot/)
 
-::: {.aside}
+::: aside
 Slides Adapted from [Tom Mock's talk](https://colorado.posit.co/rsc/rstudio-copilot/)
 :::
 
@@ -101,13 +108,13 @@ Slides Adapted from [Tom Mock's talk](https://colorado.posit.co/rsc/rstudio-copi
 
 [![](media/copilot-rstudio.gif){width="60%" fig-align="center"}](https://colorado.posit.co/rsc/rstudio-copilot/)
 
-::: {.aside}
+::: aside
 Slides Adapted from [Tom Mock's talk](https://colorado.posit.co/rsc/rstudio-copilot/)
 :::
 
-## {.center background-image="media/landmarks-collage.jpeg" background-position="right" background-size="contain" background-repeat="no-repeat"}
+##  {.center background-image="media/landmarks-collage.jpeg" background-position="right" background-size="contain" background-repeat="no-repeat"}
 
-### Let's Talk Package
+### Let's Talk Packages
 
 ## `{gptstudio}`
 
@@ -133,4 +140,4 @@ Slides Adapted from [Tom Mock's talk](https://colorado.posit.co/rsc/rstudio-copi
 
 [![](media/gpttools-copilot-example.gif){width="80%" fig-align="center"}](https://jameshwade.github.io/gpttools/)
 
-## {background-image="media/garden.png" background-size="contain"}
+##  {background-image="media/garden.png" background-size="contain"}

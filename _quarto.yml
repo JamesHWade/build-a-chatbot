@@ -3,3 +3,7 @@ project:
   type: website
   output-dir: docs
 
+format:
+  html:
+    theme: "pulse"
+

@@ -12,6 +12,7 @@ format:
   revealjs:
     theme: [default, custom.css]
     embed-resources: true
+    margin: 0.05
 execute:
   freeze: true
 ---
@@ -237,11 +238,14 @@ prepare_prompt <- function(user_message, system_prompt, history) {
 countdown::countdown(30, left = 0)
 ```
 
+## Deployment {background-image="media/launch.png" background-position="right" background-size="contain" background-repeat="no-repeat"}
 
-## Deployment {.center}
+<br>
 
-- [shinyapps.io](http://www.shinyapps.io/)
-- [HuggingFace](https://huggingface.co/docs/hub/en/spaces-sdks-docker-shiny)
-- [Posit Connect](https://posit.co/products/enterprise/connect/)
+::: {.incremental}
+- [shinyapps.io 🔗](http://www.shinyapps.io/)
+- [HuggingFace 🔗](https://huggingface.co/docs/hub/en/spaces-sdks-docker-shiny)
+- [Posit Connect 🔗](https://posit.co/products/enterprise/connect/)
+:::
 
-
+## {.center background-image="media/tunisian-coast.png" background-position="right" background-size="contain" background-repeat="no-repeat"}
