@@ -2,7 +2,7 @@
 title: "Build a Chatbot with OpenAI, Shiny, and RStudio"
 subtitle: "Using GitHub Copilot, ChatGPT, and more in your favorite IDE"
 author: "James Wade"
-date: "2024-02-03"
+date: "2024-02-17"
 format:
   html:
     toc: true
