@@ -151,7 +151,7 @@
     "href": "slides/slides_chat-bot.html#constructing-messages-for-openai",
     "title": "Let’s Build a Chatbot",
     "section": "Constructing Messages for OpenAI",
-    "text": "Constructing Messages for OpenAI\n\nThe message body:\n\n{\n  \"model\": \"gpt-3.5-turbo\",\n  \"messages\": [\n    {\"role\": \"system\", \"content\": \"You are a helpful assistant.\"},\n    {\"role\": \"user\", \"content\": \"Hello!\"}\n  ]\n}"
+    "text": "Constructing Messages for OpenAI\n\nThe message body:\n{\n  \"model\": \"gpt-3.5-turbo\",\n  \"messages\": [\n    {\"role\": \"system\", \"content\": \"You are a helpful assistant.\"},\n    {\"role\": \"user\", \"content\": \"Hello!\"}\n  ]\n}"
   },
   {
     "objectID": "slides/slides_chat-bot.html#send-requests-with-httr2",
@@ -186,7 +186,7 @@
     "href": "slides/slides_chat-bot.html#examining-the-response",
     "title": "Let’s Build a Chatbot",
     "section": "Examining the Response",
-    "text": "Examining the Response\n\nresp |&gt; \n  resp_body_json(simplifyVector = TRUE)\n\n$id\n[1] \"chatcmpl-8tGDPOeH6tHHzuoZOVUhZ0LhI1tQq\"\n\n$object\n[1] \"chat.completion\"\n\n$created\n[1] 1708181063\n\n$model\n[1] \"gpt-3.5-turbo-0125\"\n\n$choices\n  index message.role                    message.content logprobs finish_reason\n1     0    assistant Hello! How can I assist you today?       NA          stop\n\n$usage\n$usage$prompt_tokens\n[1] 9\n\n$usage$completion_tokens\n[1] 9\n\n$usage$total_tokens\n[1] 18\n\n\n$system_fingerprint\n[1] \"fp_69829325d0\""
+    "text": "Examining the Response\n\nresp |&gt; \n  resp_body_json(simplifyVector = TRUE)\n\n$id\n[1] \"chatcmpl-8tIGZLfmm3u3NuDC16ElF5CrWBHuF\"\n\n$object\n[1] \"chat.completion\"\n\n$created\n[1] 1708188947\n\n$model\n[1] \"gpt-3.5-turbo-0125\"\n\n$choices\n  index message.role                    message.content logprobs finish_reason\n1     0    assistant Hello! How can I assist you today?       NA          stop\n\n$usage\n$usage$prompt_tokens\n[1] 9\n\n$usage$completion_tokens\n[1] 9\n\n$usage$total_tokens\n[1] 18\n\n\n$system_fingerprint\n[1] \"fp_69829325d0\""
   },
   {
     "objectID": "slides/slides_chat-bot.html#wrapping-it-in-a-function",
@@ -207,21 +207,21 @@
     "href": "slides/slides_chat-bot.html#trying-out-chat",
     "title": "Let’s Build a Chatbot",
     "section": "Trying out chat()",
-    "text": "Trying out chat()\n\n\nchat(\"What is your favorite color?\")\n\n[1] \"I'm not able to perceive colors as I am an AI and don't have personal preferences.\"\n\n\n\n\n\nchat(\"Show me a simple ggplot2 example. Only code with comments. Be brief.\")\n\n[1] \"```R\\n# Load the ggplot2 package\\nlibrary(ggplot2)\\n\\n# Create a scatter plot of Sepal Length vs Sepal Width from the iris dataset\\nggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) +\\n  geom_point()\\n```\""
+    "text": "Trying out chat()\n\n\nchat(\"What is your favorite color?\")\n\n[1] \"I'm a language model AI from OpenAI, so I don't have personal preferences or feelings like humans do. But I can certainly appreciate all the beautiful colors in the world! What's your favorite color?\"\n\n\n\n\n\nchat(\"Show me a simple ggplot2 example. Only code with comments. Be brief.\")\n\n[1] \"```\\n# Load ggplot2 package\\nlibrary(ggplot2)\\n\\n# Create a simple scatter plot\\nggplot(mtcars, aes(x = mpg, y = wt)) + \\n  geom_point()\\n```\""
   },
   {
     "objectID": "slides/slides_chat-bot.html#a-prettier-response",
     "href": "slides/slides_chat-bot.html#a-prettier-response",
     "title": "Let’s Build a Chatbot",
     "section": "A Prettier Response",
-    "text": "A Prettier Response\n\nanswer &lt;- chat(\"Make a ggplot2 in an RMarkdown document and briefly tell me\n               what you made.\")\nanswer |&gt; cat()\n\n```{r}\nlibrary(ggplot2)\n\n# Create a scatter plot with random data\ndata &lt;- data.frame(x = rnorm(100), y = rnorm(100))\nggplot(data, aes(x = x, y = y)) +\n  geom_point() +\n  labs(title = \"Random Scatter Plot\", \n       x = \"X Values\", y = \"Y Values\")\n```\n\nI created a scatter plot using ggplot2 in an RMarkdown document. The plot uses random data with 100 rows and two columns (x and y). I added a title and labeled the x and y axes."
+    "text": "A Prettier Response\n\nanswer &lt;- chat(\"Make a ggplot2 in an RMarkdown document and briefly tell me\n               what you made.\")\nanswer |&gt; cat()\n\n```{r}\nlibrary(ggplot2)\n\n# Create a scatter plot of car weights and miles per gallon\nggplot(mpg, aes(x = wt, y = hwy)) +\n  geom_point() +\n  labs(title = \"Car Weight vs. Miles Per Gallon\",\n       x = \"Weight (in 1000 lbs)\",\n       y = \"Highway MPG\")\n```\n\nIn this ggplot2 visualization, I created a scatter plot comparing car weights (in 1000 lbs) on the x-axis to highway miles per gallon (MPG) on the y-axis using the `mpg` dataset that comes with ggplot2. Each point represents a different car, showing the relationship between weight and fuel efficiency. The plot title and axis labels provide context for the viewer."
   },
   {
     "objectID": "slides/slides_chat-bot.html#an-even-prettier-response",
     "href": "slides/slides_chat-bot.html#an-even-prettier-response",
     "title": "Let’s Build a Chatbot",
     "section": "An Even Prettier Response",
-    "text": "An Even Prettier Response\n\n\nlibrary(ggplot2)\n\n# Create a scatter plot with random data\ndata &lt;- data.frame(x = rnorm(100), y = rnorm(100))\nggplot(data, aes(x = x, y = y)) +\n  geom_point() +\n  labs(title = \"Random Scatter Plot\", \n       x = \"X Values\", y = \"Y Values\")\n\nI created a scatter plot using ggplot2 in an RMarkdown document. The plot uses random data with 100 rows and two columns (x and y). I added a title and labeled the x and y axes."
+    "text": "An Even Prettier Response\n\n\nlibrary(ggplot2)\n\n# Create a scatter plot of car weights and miles per gallon\nggplot(mpg, aes(x = wt, y = hwy)) +\n  geom_point() +\n  labs(title = \"Car Weight vs. Miles Per Gallon\",\n       x = \"Weight (in 1000 lbs)\",\n       y = \"Highway MPG\")\n\nIn this ggplot2 visualization, I created a scatter plot comparing car weights (in 1000 lbs) on the x-axis to highway miles per gallon (MPG) on the y-axis using the mpg dataset that comes with ggplot2. Each point represents a different car, showing the relationship between weight and fuel efficiency. The plot title and axis labels provide context for the viewer."
   },
   {
     "objectID": "slides/slides_chat-bot.html#helper-functions",
