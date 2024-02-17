@@ -4,9 +4,9 @@ subtitle: "Using Shiny, OpenAI, and RStudio to Build a Chatbot"
 title-slide-attributes:
   data-background-image: "media/Famous Landmarks Collage.jpeg"
   data-background-size: contain
-  data-background-opacity: "0.6"
+  data-background-opacity: "0.8"
 author: "James Wade"
-footer: "Let's Build a Chatbot | James Wade | R Tunis & R Ladies Rome"
+footer: "Let's Build a Chatbot | James Wade | TunisR Users & R-Ladies Rome"
 logo: "media/r-tunis.png"
 format: 
   revealjs:
@@ -248,4 +248,4 @@ countdown::countdown(30, left = 0)
 - [Posit Connect 🔗](https://posit.co/products/enterprise/connect/)
 :::
 
-## {.center background-image="media/tunisian-coast.png" background-position="right" background-size="contain" background-repeat="no-repeat"}
+## {.center background-image="media/tunisian-coast.png" background-size="contain" background-repeat="no-repeat"}

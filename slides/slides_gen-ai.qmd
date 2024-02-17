@@ -6,7 +6,7 @@ title-slide-attributes:
   data-background-size: contain
   data-background-opacity: "0.8"
 author: "James Wade"
-footer: "GenAI in RStudio | James Wade | R Tunis"
+footer: "GenAI in RStudio | James Wade | TunisR Users & R-Ladies Rome"
 logo: "media/r-tunis.png"
 format: 
   revealjs:
